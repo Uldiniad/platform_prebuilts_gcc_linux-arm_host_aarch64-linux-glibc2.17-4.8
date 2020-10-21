@@ -1,0 +1,13 @@
+diff --git a/gcc-4.8.3/libgcc/config/aarch64/linux-unwind.h b/gcc-4.8.3/libgcc/config/aarch64/linux-unwind.h
+index fde4d1495..c39ccf12f 100644
+--- a/gcc-4.8.3/libgcc/config/aarch64/linux-unwind.h
++++ b/gcc-4.8.3/libgcc/config/aarch64/linux-unwind.h
+@@ -39,7 +39,7 @@ aarch64_fallback_frame_state (struct _Unwind_Context *context,
+   struct rt_sigframe
+   {
+     siginfo_t info;
+-    struct ucontext uc;
++    ucontext_t uc;
+   };
+ 
+   struct rt_sigframe *rt_;
